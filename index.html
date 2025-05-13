@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion Learning Activity</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F2F2F2;
+            color: #532A8C;
+            margin: 0;
+            padding: 20px;
+        }
+        .accordion {
+            background-color: #9D8ABB;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+            margin-bottom: 5px;
+        }
+
+        .accordion:hover {
+            background-color: #7ABF49;
+        }
+
+        .panel {
+            padding: 15px;
+            background-color: #C3ACE8;
+            display: none;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Workplace Health and Safety Learning Activity</h2>
+
+<button class="accordion">Consultation Mechanisms and Processes</button>
+<div class="panel">
+  <p>Consultation in the workplace involves open communication between employers, Health and Safety Representatives (HSRs), Health and Safety Committees (HSCs), and workers to identify and address health and safety concerns. This can be achieved through toolbox talks, team meetings, and informal discussions. Effective consultation ensures that workers are informed about workplace hazards, participate in decision-making processes, and contribute to the development of safe work practices.</p>
+</div>
+
+<button class="accordion">Incident Reporting and Hazard Identification</button>
+<div class="panel">
+  <p>Incident reporting and hazard identification are critical components of workplace safety. HSRs and HSCs play an active role in identifying hazards, reporting incidents, and maintaining a register of injuries. These processes ensure that risks are promptly addressed and managed in accordance with WHS legislation, reducing the likelihood of workplace accidents and promoting a safer work environment.</p>
+</div>
+
+<button class="accordion">Communication with PCBUs and External Authorities</button>
+<div class="panel">
+  <p>Effective communication with the Person Conducting a Business or Undertaking (PCBU) and external authorities is essential for maintaining workplace safety. HSRs are responsible for raising safety concerns with PCBUs and can escalate unresolved issues to external bodies like WorkCover NSW if necessary. This communication ensures that legal obligations are met and that workers' safety is prioritised.</p>
+</div>
+
+<button class="accordion">Training and Competency Requirements</button>
+<div class="panel">
+  <p>HSRs and HSC members must undergo training to effectively perform their roles. This training equips them with the skills to identify hazards, conduct risk assessments, and implement safety measures. Only HSRs who have completed approved training are permitted to issue Provisional Improvement Notices (PINs) or direct unsafe work to cease, ensuring that decisions are made competently and in compliance with WHS regulations.</p>
+</div>
+
+<button class="accordion">Monitoring and Review of Safety Measures</button>
+<div class="panel">
+  <p>Monitoring and reviewing safety measures are crucial for continuous improvement in workplace health and safety. HSRs and HSCs are actively involved in assessing the effectiveness of safety controls and conducting regular safety audits. This ongoing review process helps to identify gaps, ensure compliance with WHS legislation, and maintain a safe working environment for all staff.</p>
+</div>
+
+<script>
+    const accordions = document.querySelectorAll('.accordion');
+    accordions.forEach(acc => {
+        acc.addEventListener('click', function() {
+            this.classList.toggle('active');
+            const panel = this.nextElementSibling;
+            if (panel.style.display === 'block') {
+                panel.style.display = 'none';
+            } else {
+                panel.style.display = 'block';
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
